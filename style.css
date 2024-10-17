@@ -6,7 +6,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
     background-image: url('purple-aesthetic-rain.gif');
     background-size: cover;
     background-position: center;
@@ -20,7 +19,8 @@ body {
     
     width: 320px;
     padding: 20px;
-    background-color: rgb(221, 0, 255);
+    background-color: #2a0a51;
+    color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
