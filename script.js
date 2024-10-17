@@ -3,6 +3,10 @@ let display = document.getElementById('display');
 
 // Fungsi untuk menambah angka/simbol ke display
 function appendNumber(number) {
+    // Jika ada tulisan "Error", kita hapus dulu sebelum menambahkan angka
+    if (display.value === 'Error') {
+        display.value = '';
+    }
     display.value += number;
 }
 
@@ -19,10 +23,10 @@ function deleteLast() {
 // Fungsi untuk menghitung hasil
 function calculate() {
     try {
-        // Tangani simbol '%' untuk mengkonversinya menjadi perhitungan persentase
-        let expression = display.value.replace(/([0-9]+)%/g, "(($1)/100)");
+        let expression = display.value
+            .replace(/([0-9]+)%/g, "(($1)/100)") // Ubah % jadi operasi persentase
+            .replace(/\^/g, "**"); // Ubah ^ jadi operasi pangkat
 
-        // Evaluasi ekspresi yang sudah dimodifikasi
         display.value = eval(expression);
     } catch (error) {
         display.value = 'Error';

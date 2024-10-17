@@ -5,18 +5,22 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    background-image: url('purple-aesthetic-rain.gif');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000;
-    font-family: 'Arial', sans-serif;
 }
 
 .calculator {
+    
     width: 320px;
     padding: 20px;
-    background-color: #00e1ff;
+    background-color: rgb(221, 0, 255);
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -48,6 +52,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    padding: 10px; /* Menambah padding untuk semua tombol */
 }
 
 button:hover {
@@ -55,7 +60,12 @@ button:hover {
 }
 
 button.zero {
-    grid-column: span 2;
+    grid-column: span 2; /* Membuat tombol 0 selebar 2 kolom */
+}
+
+button.equal {
+    grid-column: span 2; /* Membuat tombol = selebar 2 kolom */
+    height: 130px; /* Memperpanjang tombol = */
 }
 
 button:active {
